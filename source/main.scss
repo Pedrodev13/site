@@ -1,0 +1,141 @@
+@use 'reset';
+
+@keyframes images {
+    30% {
+        transform: translateY(-2%);
+    }
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(143, 143, 143);
+    font-family: 'Kanit', sans-serif;
+}
+
+.redes {
+    position: fixed;
+    left: 96%;
+    top: 85%;
+
+    img {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Início
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 10px;
+
+
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+        background-color: rgb(65, 62, 62);
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+
+        &:hover {
+            color: rgb(0, 153, 255);
+        }
+
+    }
+}
+
+// Corpo
+
+#sobremin {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgb(133, 131, 131);
+    border-radius: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+
+    #person {
+        width: 400px;
+        animation: images 1.5s infinite ease-in-out;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .icons-skils {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin-right: 40px;
+
+        img {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+#myproject {
+    margin-top: 40px;
+        img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: all ease .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .caixa {
+            display: grid;
+            grid-template-columns: repeat(4, 24%);
+            column-gap: 1.5%;
+            text-align: center;
+        }
+        
+        
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+    .container {
+        max-width: 80%;
+    }
+
+    .img-apresentacao {
+        max-width: 100%;
+    }
+
+    .img-apresentacao {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 80px;
+    }
+
+    .caixa{
+        grid-template-columns: repeat(1, 99%);
+        text-align: center;
+    }
+}
